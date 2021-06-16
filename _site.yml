@@ -4,7 +4,7 @@ description: |
   My Website
 output_dir: "_site"
 exclude: ["data.csv"]
-navbar
+navbar:
   search: true
   left:
     logo:
