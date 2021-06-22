@@ -25,6 +25,7 @@ gapminder %>%
   coord_flip(ylim = c(40,80)) +
   #facet_wrap(vars(year)) +
   gganimate::transition_time(year) +
+  theme_hc() +
   labs(title = "Durchschnittliche Lebenserwartung im Jahr: {round(frame_time,0)}
        in Europa", x = "Länder", y = "Lebenserwartung in Jahren") -> anim
 
