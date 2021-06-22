@@ -1,0 +1,55 @@
+---
+title: "Metascore und Bechdel-Rating"
+description: |
+  Die beiden Diagramme zeigen die Bewertung von Filmen zwischen 2000 und 2013. Das erste Diagramm zeigt die Bewertung mit dem Metascore, das zweite Diagramm zeigt die Bewertung mit dem Bechdel-Rating.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(colorspace)
+library(ggthemes)
+```
+
+
+```{r load_data}
+
+# Filme von 1970 bis 2020, wenig Informationen pro Film
+raw_bechdel <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/raw_bechdel.csv')
+# Filme von 1970 bis 2013, viele Informationen, viele Informationen pro Film
+
+movies <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/movies.csv')
+```
+## Metascore
+```{r}
+movies %>% 
+  filter(year %in% 2000:2013) %>%
+  ggplot(aes(x = year, y = metascore, color = metascore)) +
+  #geom_point() +
+  geom_jitter() +
+  scale_y_continuous(breaks = c(0, 20 ,40 ,60 ,80, 100)) +
+  scale_color_continuous_sequential(palette = "Batlow") +
+  theme_stata() +
+  labs(x = "Jahr", y = "Metascore", title = "Metascores von 2000 to 2013") -> plot_3
+
+plot_3
+```
+## Bechdel-Rating
+```{r}
+raw_bechdel %>% 
+  filter(year %in% 2010:2013) %>% 
+  ggplot(aes(x = year, y = rating, color = rating)) +
+  #geom_point() +
+  geom_jitter() +
+  scale_y_continuous(breaks = c(0, 1, 2 , 3 , 4)) +
+  scale_color_continuous_sequential(palette = "Batlow") +
+  theme_stata() +
+  labs(x = "Jahr", y = "Bechdel-Rating", title = "Bechdel-Rating von 2000 to 2013") -> plot_4
+
+plot_4
+
+#library(patchwork)
+
+#(plot_3 + plot_4)
+```

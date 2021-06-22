@@ -2,11 +2,19 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this site",
-      "description": "Some additional details about the website",
+      "title": "Über diese Website",
+      "description": "Auf dieser Website finden Sie einige ausgewählte Visualisierungen.",
       "author": [],
-      "contents": "\r\nI wrote this.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-16T05:40:11+02:00"
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-22T15:44:04+02:00"
+    },
+    {
+      "path": "Bechdel.html",
+      "title": "Metascore und Bechdel-Rating",
+      "description": "Die beiden Diagramme zeigen die Bewertung von Filmen zwischen 2000 und 2013. Das erste Diagramm zeigt die Bewertung mit dem Metascore, das zweite Diagramm zeigt die Bewertung mit dem Bechdel-Rating.\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\nMetascore\r\n\r\n\r\n\r\nBechdel-Rating\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-22T15:44:09+02:00"
     },
     {
       "path": "data_analysis.html",
@@ -14,15 +22,46 @@
       "description": "Diese Seite beinhaltet unsere Datenanalyse.\n",
       "author": [],
       "contents": "\r\nÜberschrift 1\r\nÜberschrift 2\r\ngoogle\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-16T05:40:12+02:00"
+      "last_modified": "2021-06-22T15:44:10+02:00"
+    },
+    {
+      "path": "Impressum.html",
+      "title": "Impressum",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-22T15:44:11+02:00"
     },
     {
       "path": "index.html",
-      "title": "My Website",
-      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "title": "Home",
+      "description": "Willkommen auf meiner Distill-Website. Hier gibt es einige Visualisierungen, die im Laufe des Seminars \"Informationsvisualisierung und Sprache\" entstanden sind. Viel Spaß!\n",
       "author": [],
-      "contents": "\r\nThis is my first heading\r\nThis is my first subheading\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-16T05:40:14+02:00"
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-22T15:44:12+02:00"
+    },
+    {
+      "path": "Lebenserwartung.html",
+      "title": "Lebenserwartung",
+      "description": "Das Diagramm zeigt die durchschnittliche Lebenserwartung in Europa.\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-22T15:47:07+02:00"
+    },
+    {
+      "path": "Netflix.html",
+      "title": "Netflix",
+      "description": "Das Diagramm zeigt die Veröffentlichung von Filmen und Serien zwischen 2010 und 2020 auf Netflix.\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-22T15:47:10+02:00"
+    },
+    {
+      "path": "Temperature.html",
+      "title": "Temperaturentwicklung",
+      "description": "Das Diagramm zeigt den durchschnittlichen Temperaturanstieg von 2000 - 2016.\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-22T15:47:12+02:00"
     }
   ],
   "collections": []

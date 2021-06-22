@@ -1,11 +1,9 @@
 ---
-title: "About this site"
+title: "Über diese Website"
 description: |
-  Some additional details about the website
+  Auf dieser Website finden Sie einige ausgewählte Visualisierungen.
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
-I wrote this.

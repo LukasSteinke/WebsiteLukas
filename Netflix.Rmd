@@ -1,0 +1,37 @@
+---
+title: "Netflix"
+description: |
+  Das Diagramm zeigt die Veröffentlichung von Filmen und Serien zwischen 2010 und 2020 auf Netflix.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(ggthemes)
+
+netflix_titles <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-04-20/netflix_titles.csv')  %>% 
+  separate(duration, c("duration", "duration_units"), " ", convert = TRUE)
+
+
+
+# Jeden Eintrag mehrfach listen für jede Kategorie einmal
+netflix_titles %>% separate_rows(listed_in, sep = ", ")
+
+# Jeden Eintrag mehrfach listen für jeden Schauspieler einmal
+netflix_titles %>% separate_rows(cast, sep = ", ")
+
+
+```
+
+
+```{r}
+# Vergleich Filme und Serien zwischen 2010 und 2020.
+netflix_titles %>%
+  filter(release_year %in% 2010:2020) %>%
+ggplot(aes(x = release_year, fill = type )) + geom_bar(position = "dodge") +
+  scale_x_continuous(breaks = c(2010, 2012, 2014, 2016, 2018, 2020)) +
+  theme_stata() +
+  labs(x = "Jahr", y = "Anzahl an Veröffentlichungen")
+```
+

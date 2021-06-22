@@ -1,7 +1,7 @@
 ---
-title: "My Website"
+title: "Home"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  Willkommen auf meiner Distill-Website. Hier gibt es einige Visualisierungen, die im Laufe des Seminars "Informationsvisualisierung und Sprache" entstanden sind. Viel Spaß!
 site: distill::distill_website
 ---
 
@@ -11,13 +11,4 @@ knitr::opts_chunk$set(echo = FALSE)
 # Learn more about creating websites with Distill at:
 # https://rstudio.github.io/distill/website.html
 
-```
-
-# This is my first heading
-
-## This is my first subheading
-
-```{r}
-library(tidyverse)
-mtcars %>% ggplot() + aes(disp, mpg) + geom_point()
 ```

@@ -1,0 +1,38 @@
+---
+title: "Lebenserwartung"
+description: |
+  Das Diagramm zeigt die durchschnittliche Lebenserwartung in Europa.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(lubridate)
+library(gganimate)
+library(gifski)
+library(gapminder)
+```
+
+
+```{r}
+gapminder %>%
+  filter(continent =="Europe") %>%
+  ggplot() +
+  aes(x = fct_reorder(country, lifeExp) , y = lifeExp, fill = country) +
+  geom_col() +
+  scale_y_continuous(breaks = c(20,40, 60, 80)) +
+  coord_flip(ylim = c(40,80)) +
+  #facet_wrap(vars(year)) +
+  gganimate::transition_time(year) +
+  labs(title = "Durchschnittliche Lebenserwartung im Jahr: {round(frame_time,0)}
+       in Europa", x = "Länder", y = "Lebenserwartung in Jahren") -> anim
+
+animate(
+  anim,
+  fps = 10,
+  nframes = 240)
+
+```
+
+

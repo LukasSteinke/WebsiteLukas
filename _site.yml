@@ -1,7 +1,7 @@
 name: "WebsiteLukas"
-title: "My Website"
+title: "Lukas Website"
 description: |
-  My Website
+  Lukas Website
 output_dir: "_site"
 exclude: ["data.csv"]
 navbar:
@@ -13,16 +13,23 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "Daten Analyse"
+    - text: "Visualisierungen"
       menu:
-        - text: "Wichtiges"
-        - text: "Datenanalyse 1"
-          href: data_analysis.html
-        - text: "---"
-        - text: "Publishing a Website"
-          href: data_analysis.html
-    - icon: fa-download
-      href: https://github.com/rstudio/distill
+        - text: "Netflix"
+          href: Netflix.html
+        - text: "Metascore/Bechdel"
+          href: Bechdel.html
+        - text: "Temperaturentwicklung"
+          href: Temperature.html
+        - text: "Lebenserwartung"
+          href: Lebenserwartung.html
+        #- text: "---"
+        #- text: "Publishing a Website"
+         # href: data_analysis.html
     - text: "About"
       href: about.html
+    - text: "Impressum"
+      href: Impressum.html
+    - icon: fa-download
+      href: https://github.com/rstudio/distill
 output: distill::distill_article
